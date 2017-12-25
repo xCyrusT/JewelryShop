@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryShop", "JewelryShop\JewelryShop.csproj", "{83F12DC9-C5CC-484E-BFC3-69F6F76BFE62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryShop.Model", "JewelryShop.Model\JewelryShop.Model.csproj", "{8D117A06-1AFF-430B-8B1C-993073172723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryShop.IRepository", "JewelryShop.IRepository\JewelryShop.IRepository.csproj", "{6C634DA3-406E-4569-97EF-B3E6D03FC393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryShop.Repository", "JewelryShop.Repository\JewelryShop.Repository.csproj", "{145D1518-6858-46C8-ADBE-526D29199122}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83F12DC9-C5CC-484E-BFC3-69F6F76BFE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F12DC9-C5CC-484E-BFC3-69F6F76BFE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F12DC9-C5CC-484E-BFC3-69F6F76BFE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F12DC9-C5CC-484E-BFC3-69F6F76BFE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D117A06-1AFF-430B-8B1C-993073172723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D117A06-1AFF-430B-8B1C-993073172723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D117A06-1AFF-430B-8B1C-993073172723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D117A06-1AFF-430B-8B1C-993073172723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C634DA3-406E-4569-97EF-B3E6D03FC393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C634DA3-406E-4569-97EF-B3E6D03FC393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C634DA3-406E-4569-97EF-B3E6D03FC393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C634DA3-406E-4569-97EF-B3E6D03FC393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145D1518-6858-46C8-ADBE-526D29199122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145D1518-6858-46C8-ADBE-526D29199122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145D1518-6858-46C8-ADBE-526D29199122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145D1518-6858-46C8-ADBE-526D29199122}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
