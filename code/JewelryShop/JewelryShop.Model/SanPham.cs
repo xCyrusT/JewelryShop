@@ -1,4 +1,4 @@
-namespace JewelryShop.Model
+﻿namespace JewelryShop.Model
 {
     using System;
     using System.Collections.Generic;
@@ -9,39 +9,38 @@ namespace JewelryShop.Model
     [Table("SanPham")]
     public partial class SanPham
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SanPham()
-        {
-            ChiTietHDBans = new HashSet<ChiTietHDBan>();
-        }
-
-        [StringLength(5)]
-        public string SanPhamID { get; set; }
+        [Display(Name = "Mã sản phẩm")]
+        public int SanPhamID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên sản phẩm")]
         public string TenSanPham { get; set; }
 
-        [StringLength(5)]
-        public string DanhMucID { get; set; }
-
+        [Display(Name = "Giá")]
         public double? DonGia { get; set; }
 
         [StringLength(10)]
+        [Display(Name = "Đơn vị tính")]
         public string DonViTinh { get; set; }
 
-        public int? SoLuong { get; set; }
-
         [StringLength(100)]
+        [Display(Name = "Hình ảnh")]
         public string Anh { get; set; }
 
-        [StringLength(1000)]
-        public string GhiChu { get; set; }
+        [Display(Name = "Mô tả")]
+        public string MoTa { get; set; }
 
+        [Column(TypeName = "smalldatetime")]
+        [Display(Name = "Ngày cập nhật")]
+        public DateTime? NgayCapNhat { get; set; }
+
+        [Display(Name = "Danh mục")]
+        public int? DanhMucID { get; set; }
+
+        [Display(Name = "Số lượng bán")]
+        public int? SoLuongBan { get; set; }
+
+        [Display(Name = "Trạng thái")]
         public int? TrangThai { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHDBan> ChiTietHDBans { get; set; }
-
-        public virtual DanhMuc DanhMuc { get; set; }
     }
 }

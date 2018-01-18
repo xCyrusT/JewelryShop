@@ -1,0 +1,14 @@
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\obj\Debug\JewelryShop.Repository.csprojResolveAssemblyReference.cache
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.Repository.dll.config
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.Repository.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.Repository.pdb
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\EntityFramework.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.IRepository.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.Model.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.IRepository.pdb
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\JewelryShop.Model.pdb
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\EntityFramework.xml
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\obj\Debug\JewelryShop.Repository.dll
+D:\dnu\dotNet\JewelryShop\code\JewelryShop\JewelryShop.Repository\obj\Debug\JewelryShop.Repository.pdb

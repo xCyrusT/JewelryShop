@@ -17,5 +17,13 @@ namespace JewelryShop
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Session_Start()
+        {
+            Session["NhanVienID"] = null;
+            Session["TenNhanVien"] = null;
+            Session["Email"] = null;
+            Session["Avatar"] = null;
+        }
     }
 }

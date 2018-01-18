@@ -1,0 +1,50 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<JewelryShop.Model.SanPham>
+@{
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Đơn giá</th>
+        <th>Đơn vị tính</th>
+        <th>Ảnh</th>
+        <th>Ngày cập nhật</th>
+        <th>Danh mục</th>
+        <th>Số lượng bán</th>
+        <th>Trạng thái</th>
+        <th>Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SanPhamID</td>
+            <td>@item.TenSanPham</td>
+            <td>@item.DonGia</td>
+            <td>@item.DonViTinh</td>
+            <td>@item.Anh</td>
+            <td>@item.NgayCapNhat</td>
+            <td>@item.DanhMucID</td>
+            <td>@item.SoLuongBan</td>
+            <td>@item.TrangThai</td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.SanPhamID }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.SanPhamID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+@Html.PagedListPager(Model, page => Url.Action("GetPaging", new { page }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions()
+    { HttpMethod = "GET", UpdateTargetId = "SanPham_Area" }))

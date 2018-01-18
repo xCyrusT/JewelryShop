@@ -1,4 +1,4 @@
-namespace JewelryShop.Model
+﻿namespace JewelryShop.Model
 {
     using System;
     using System.Collections.Generic;
@@ -9,21 +9,14 @@ namespace JewelryShop.Model
     [Table("DanhMuc")]
     public partial class DanhMuc
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DanhMuc()
-        {
-            SanPhams = new HashSet<SanPham>();
-        }
-
-        [StringLength(5)]
-        public string DanhMucID { get; set; }
+        [Display(Name = "Mã danh mục")]
+        public int DanhMucID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên danh mục")]
         public string TenDanhMuc { get; set; }
 
+        [Display(Name = "Trạng thái")]
         public int? TrangThai { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

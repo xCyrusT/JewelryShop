@@ -1,0 +1,48 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<JewelryShop.Model.HoaDon>
+@{
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách hoá đơn</h2>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>Mã hoá đơn</th>
+        <th>Mã khách hàng</th>
+        <th>Ngày đặt hàng</th>
+        <th>Ngày giao hàng</th>
+        <th>Người nhận</th>
+        <th>Địa chỉ nhận</th>
+        <th>Điện thoại</th>
+        <th>Tổng tiền</th>
+        <th>Trạng thái</th>
+        <th>Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.HoaDonID</td>
+            <td>@item.KhachHangID</td>
+            <td>@item.NgayDatHang</td>
+            <td>@item.NgayGiaoHang</td>
+            <td>@item.NguoiNhan</td>
+            <td>@item.DiaChiNhan</td>
+            <td>@item.DienThoai</td>
+            <td>@item.TongTien</td>
+            <td>@item.TrangThai</td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.HoaDonID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+@Html.PagedListPager(Model, page => Url.Action("GetPaging", new { page }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions()
+    { HttpMethod = "GET", UpdateTargetId = "HoaDon_Area" }))

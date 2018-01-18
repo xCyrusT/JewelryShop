@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietHDBan.cs" />
+    <Compile Include="ChiTietHD.cs" />
     <Compile Include="DanhMuc.cs" />
-    <Compile Include="HoaDonBan.cs" />
+    <Compile Include="HoaDon.cs" />
     <Compile Include="JewelryShopDbContext.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="NhanVien.cs" />

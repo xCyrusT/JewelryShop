@@ -1,0 +1,30 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<JewelryShop.Model.SanPham>
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="product">
+    <div class="container">
+        <div class="product-top">
+            <h3>Kết quả tìm kiếm</h3>
+            <div class="product-one">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3 product-left">
+                        <div class="product-main simpleCart_shelfItem">
+                            <a href="@Url.Action("Details","SanPham", new { id=item.SanPhamID })" class="mask"><img class="img-responsive zoom-img" src="@item.Anh" alt="" /></a>
+                            <div class="product-bottom">
+                                <h3>@item.TenSanPham</h3>
+                                <p>@item.DanhMucID @item.SanPhamID</p>
+                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">@item.DonGia VND</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("Search", "SanPham", new { page, keyWord = ViewBag.search }))
+    </div>
+</div>

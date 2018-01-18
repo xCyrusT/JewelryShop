@@ -1,4 +1,4 @@
-namespace JewelryShop.Model
+﻿namespace JewelryShop.Model
 {
     using System;
     using System.Collections.Generic;
@@ -9,34 +9,31 @@ namespace JewelryShop.Model
     [Table("KhachHang")]
     public partial class KhachHang
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KhachHang()
-        {
-            HoaDonBans = new HashSet<HoaDonBan>();
-        }
-
-        [StringLength(5)]
-        public string KhachHangID { get; set; }
+        [Display(Name = "Mã khách hàng")]
+        public int KhachHangID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên khách hàng")]
         public string TenKhachHang { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Địa chỉ")]
         public string DiaChi { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [StringLength(32)]
+        [Display(Name = "Pass")]
         public string Pass { get; set; }
 
         [StringLength(15)]
+        [Display(Name = "Số điện thoại")]
         public string DienThoai { get; set; }
 
         [StringLength(1000)]
+        [Display(Name = "Ghi chú")]
         public string GhiChu { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }
     }
 }

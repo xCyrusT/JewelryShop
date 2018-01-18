@@ -1,0 +1,38 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<JewelryShop.Model.DanhMuc>
+@{
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách danh mục</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Mã danh mục</th>
+        <th>Tên danh mục</th>
+        <th>Trạng thái</th>
+        <th>Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DanhMucID</td>
+            <td>@item.TenDanhMuc</td>
+            <td>@item.TrangThai</td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.DanhMucID }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.DanhMucID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+@Html.PagedListPager(Model, page => Url.Action("GetPaging", new { page }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions()
+    { HttpMethod = "GET", UpdateTargetId = "DanhMuc_Area" }))

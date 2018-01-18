@@ -12,18 +12,15 @@ namespace JewelryShop.Model
         {
         }
 
-        public virtual DbSet<ChiTietHDBan> ChiTietHDBans { get; set; }
+        public virtual DbSet<ChiTietHD> ChiTietHDs { get; set; }
         public virtual DbSet<DanhMuc> DanhMucs { get; set; }
-        public virtual DbSet<HoaDonBan> HoaDonBans { get; set; }
+        public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<HoaDonBan>()
-                .HasOptional(e => e.ChiTietHDBan)
-                .WithRequired(e => e.HoaDonBan);
         }
     }
 }
